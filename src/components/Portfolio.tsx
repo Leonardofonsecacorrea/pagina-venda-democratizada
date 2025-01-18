@@ -1,6 +1,10 @@
 import { Image } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export const Portfolio = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <section className="py-24 bg-white px-4">
       <div className="max-w-6xl mx-auto">
@@ -15,11 +19,14 @@ export const Portfolio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Primeira imagem do portfólio */}
-          <div className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+          <div 
+            className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer"
+            onClick={() => setSelectedImage("/lovable-uploads/35bef10c-17d8-4aa0-9810-676050262fe5.png")}
+          >
             <img
               src="/lovable-uploads/35bef10c-17d8-4aa0-9810-676050262fe5.png"
               alt="Landing Page Exemplo"
-              className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-[300px] object-cover object-top transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-medium">Landing Page Profissional</p>
@@ -40,6 +47,18 @@ export const Portfolio = () => {
           ))}
         </div>
       </div>
+
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl w-full p-0">
+          {selectedImage && (
+            <img
+              src={selectedImage}
+              alt="Visualização completa"
+              className="w-full h-auto"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
