@@ -22,7 +22,7 @@ export const CTA = () => {
         <Button 
           size="lg"
           className="group bg-white hover:bg-white/90 text-primary px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105"
-          onClick={() => window.open("https://wa.me/5551985503161?text=Oi%20vi%20seu%20site%20sobre%20landing%20page%20profissional%20por%20R$500,%20um%20atendente%20por%20gentileza.")}
+          onClick={() => window.open("https://wa.me/5551985503161?text=Olá!%20Vi%20seu%20site%20sobre%20landing%20pages%20profissionais%20por%20R$500.%20Poderia%20me%20atender,%20por%20favor?")}
         >
           Falar pelo WhatsApp
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

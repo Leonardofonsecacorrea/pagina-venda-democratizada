@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
+import { Portfolio } from "@/components/Portfolio";
 import { CTA } from "@/components/CTA";
 
 const Index = () => {
@@ -7,6 +8,7 @@ const Index = () => {
     <main className="min-h-screen bg-white">
       <Hero />
       <Features />
+      <Portfolio />
       <CTA />
     </main>
   );
