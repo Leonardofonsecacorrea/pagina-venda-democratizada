@@ -24,7 +24,7 @@ export const Hero = () => {
         <Button 
           size="lg"
           className="group bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105"
-          onClick={() => window.open("https://wa.me/seu_numero?text=Olá! Gostaria de criar uma landing page profissional.")}
+          onClick={() => window.open("https://wa.me/5551985503161?text=Oi%20vi%20seu%20site%20sobre%20landing%20page%20profissional%20por%20R$500,%20um%20atendente%20por%20gentileza.")}
         >
           Começar Agora
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
