@@ -1,7 +1,7 @@
 
-import { Image } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+
 export const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
@@ -51,8 +51,16 @@ export const Portfolio = () => {
       </div>
 
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl w-full p-0">
-          {selectedImage && <img src={selectedImage} alt="Visualização completa" className="w-full h-auto" />}
+        <DialogContent className="max-w-5xl w-[95vw] p-2 overflow-hidden">
+          {selectedImage && (
+            <div className="max-h-[85vh] overflow-auto">
+              <img 
+                src={selectedImage} 
+                alt="Visualização completa" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </section>;
