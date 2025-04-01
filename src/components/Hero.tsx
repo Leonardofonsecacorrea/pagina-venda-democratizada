@@ -1,3 +1,4 @@
+
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 export const Hero = () => {
@@ -10,10 +11,10 @@ export const Hero = () => {
           <span className="block text-secondary mt-2">Seu Espaço exclusivo</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto">Dê um passo para posicionar seu negócio na internet. Tenha uma página de vendas profissional e otimizada.
+        <p className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto">Dê um passo para posicionar seu negócio na internet. Tenha uma página de vendas profissional e otimizada.
 Seu domínio, sua identidade, seu futuro.</p>
 
-        <Button size="lg" className="group bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105" onClick={() => window.open("https://wa.me/5551985503161?text=Olá!%20Vi%20seu%20site%20sobre%20landing%20pages%20profissionais%20por%20R$500.%20Poderia%20me%20atender,%20por%20favor?")}>
+        <Button size="lg" className="group bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105" onClick={() => window.open("https://wa.me/5551985503161?text=Olá,%20vim%20através%20da%20sua%20página.%20Estou%20aqui%20para%20falar%20sobre:%20")}>
           Começar Agora
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
         </Button>

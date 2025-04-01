@@ -1,3 +1,4 @@
+
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 export const CTA = () => {
@@ -14,7 +15,7 @@ export const CTA = () => {
 
         <p className="text-lg text-white/80 max-w-2xl mx-auto">Faça a escolha certa e coloque-se online. Comece agora mesmo, solicite uma consultoria.</p>
 
-        <Button size="lg" className="group bg-white hover:bg-white/90 text-primary px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105" onClick={() => window.open("https://wa.me/5551985503161?text=Olá!%20Vi%20seu%20site%20sobre%20landing%20pages%20profissionais%20por%20R$500.%20Poderia%20me%20atender,%20por%20favor?")}>
+        <Button size="lg" className="group bg-white hover:bg-white/90 text-primary px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105" onClick={() => window.open("https://wa.me/5551985503161?text=Olá,%20vim%20através%20da%20sua%20página.%20Estou%20aqui%20para%20falar%20sobre:%20")}>
           Falar pelo WhatsApp
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
         </Button>
