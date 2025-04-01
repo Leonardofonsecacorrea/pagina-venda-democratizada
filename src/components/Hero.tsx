@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 export const Hero = () => {
@@ -8,7 +7,7 @@ export const Hero = () => {
         
         <h1 className="text-4xl md:text-6xl font-bold text-primary tracking-tight">
           Sua Presença Online
-          <span className="block text-secondary mt-2">Seu Espaço exclusivo</span>
+          <span className="block text-secondary mt-2">Seu Espaço Exclusivo</span>
         </h1>
 
         <p className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto">Dê um passo para posicionar seu negócio na internet. Tenha uma página de vendas profissional e otimizada.
