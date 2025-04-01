@@ -1,9 +1,11 @@
 
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imageLoading, setImageLoading] = useState(true);
   
   const portfolioItems = [
     {
@@ -13,15 +15,24 @@ export const Portfolio = () => {
     },
     {
       id: 2,
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "Loja Virtual para Boutique"
+      imageUrl: "/lovable-uploads/e2ff214c-3c4f-43e4-bb77-e830e570d06b.png",
+      title: "Site para Barbearia"
     },
     {
       id: 3,
-      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      title: "Site para Pequena Padaria"
+      imageUrl: "/lovable-uploads/6a6e14bb-a783-4056-a182-a506d9805d7b.png",
+      title: "Site para Fotógrafa"
     }
   ];
+  
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+  
+  const openImageModal = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+    setImageLoading(true);
+  };
   
   return <section className="py-24 bg-white px-4">
       <div className="max-w-6xl mx-auto">
@@ -35,7 +46,7 @@ export const Portfolio = () => {
             <div 
               key={item.id}
               className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" 
-              onClick={() => setSelectedImage(item.imageUrl)}
+              onClick={() => openImageModal(item.imageUrl)}
             >
               <img 
                 src={item.imageUrl} 
@@ -51,13 +62,18 @@ export const Portfolio = () => {
       </div>
 
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-5xl w-[95vw] p-2 overflow-hidden">
+        <DialogContent className="max-w-5xl w-[95vw] p-2 overflow-hidden max-h-[95vh]">
           {selectedImage && (
-            <div className="max-h-[85vh] overflow-auto">
+            <div className="relative">
+              {imageLoading && (
+                <Skeleton className="w-full h-[80vh]" />
+              )}
               <img 
                 src={selectedImage} 
                 alt="Visualização completa" 
-                className="w-full h-auto object-contain"
+                className="w-full h-auto max-h-[85vh] object-contain mx-auto"
+                onLoad={handleImageLoad}
+                style={{ display: imageLoading ? 'none' : 'block' }}
               />
             </div>
           )}
